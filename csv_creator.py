@@ -8,5 +8,5 @@ def csvCreator(file_name: str = 'example_file.csv', data: list = ['']) -> None:
         Creates a csv file from a list of strings.
     '''
     with open(file_name, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile, delimiter=',')
+        writer = csv.writer(csvfile, delimiter='\n')
         writer.writerow(data)
