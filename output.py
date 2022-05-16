@@ -11,7 +11,9 @@ def output(file_name: str = 'example.csv', data: list = ['honey', 'milk', 'chees
     try:
         csvCreator(file_name, data)
         print('Success!')
-        print(csv_content_file_reader(file_name))
+        file_content = csv_content_file_reader(file_name)
+        for row in file_content:
+            print(row)
     except Exception as e:
         print(e)
         print('Error!')
