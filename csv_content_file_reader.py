@@ -8,5 +8,5 @@ def csv_content_file_reader(file_name: str) -> list:
         Reads a csv file and returns a list of strings.
     '''
     with open(file_name, 'r') as csvfile:
-        reader = csv.reader(csvfile, delimiter=',')
+        reader = csv.reader(csvfile, delimiter='\n')
         return [row for row in reader]
